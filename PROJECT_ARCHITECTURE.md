@@ -4,8 +4,7 @@
 
 ## 1. Visão Geral
 
-**O que o app faz e para quem**
-ASCEND é um jogo multiplayer de corrida vertical em tempo real para navegador. Jogadores competem para subir plataformas geradas proceduralmente e tocar primeiro na bandeira no topo do mapa. Destinado a sessões casuais com múltiplos jogadores simultâneos na mesma rede/servidor.
+ASCEND é um jogo multiplayer de corrida vertical em tempo real para navegador. Jogadores competem para subir plataformas geradas proceduralmente e tocar primeiro na bandeira no topo do mapa. Quaisquer pessoas na mesma rede local podem se conectar ao jogo (desktop e mobile), bastando apenas uma maquina iniciar o hosting do servidor e os usuarios inserirem na url do navegador http://ip_da_maquina_host:3000.
 
 **Stack de tecnologias**
 - **Backend:** Node.js + Express (CommonJS)
