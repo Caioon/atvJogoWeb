@@ -1,6 +1,6 @@
 # ASCEND
 
-Jogo multiplayer de corrida vertical em tempo real para navegador (desktop e mobile, crossplay). Jogadores competem para subir plataformas geradas proceduralmente e tocar primeiro na bandeira no topo do mapa.
+Jogo multiplayer de corrida vertical para navegador (desktop e mobile, crossplay). Jogadores competem para subir plataformas geradas proceduralmente e tocar primeiro na bandeira no topo do mapa.
 
 ---
 
@@ -8,8 +8,7 @@ Jogo multiplayer de corrida vertical em tempo real para navegador (desktop e mob
 
 - **Entrar com um nome** — sem cadastro, sem senha. Só digitar um nome e entrar.
 - **Lobby com vários jogadores** — todos que entram aparecem no lobby em tempo real. Cada jogador recebe uma cor única automaticamente.
-- **Iniciar a partida** — o primeiro jogador a entrar vira o administrador e pode iniciar um countdown de 10 segundos. Qualquer um pode cancelar antes de zerar.
-- **Jogar em tempo real** — cada jogador controla seu personagem no mesmo mapa simultaneamente. As posições dos outros jogadores aparecem na tela com movimento suave.
+- **Iniciar a partida** — o primeiro jogador a entrar no lobby vira o administrador e pode iniciar um countdown de 10 segundos pra iniciar, podendo cancelar o countdown.
 - **Mapa procedural** — a cada partida, um novo mapa é gerado. As plataformas nunca são as mesmas.
 - **Vencer chegando primeiro** — quem tocar a bandeira no topo do mapa primeiro vence. Os outros veem uma tela de derrota com o nome do vencedor.
 - **Morrer caindo** — se cair no vazio abaixo das plataformas, o jogador é eliminado e vai para uma tela de espera.
