@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ASCEND | Jogo</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body data-page="game">
+  <div class="screen active" id="screen-game">
+
+    <div id="game-hud">
+      <span id="hud-name"></span>
+      <button id="btn-back-lobby">← LOBBY</button>
+    </div>
+
+    <canvas id="game-canvas"></canvas>
+
+    <div id="controls-hint">
+      ← → mover &nbsp;|&nbsp; W / ESPAÇO pular
+    </div>
+
+    <div id="mobile-controls">
+      <div id="mobile-left-group">
+        <button id="btn-mobile-left">◀</button>
+        <button id="btn-mobile-right">▶</button>
+      </div>
+      <button id="btn-mobile-jump">▲</button>
+    </div>
+
+    <!-- Morte: caiu no vazio -->
+    <div class="game-overlay" id="overlay-death">
+      <div class="overlay-card">
+        <span class="overlay-title overlay-death-title">Você morreu</span>
+        <button class="btn-primary" id="btn-death-lobby">VOLTAR À ESPERA</button>
+      </div>
+    </div>
+
+    <!-- Derrota: outro player venceu -->
+    <div class="game-overlay" id="overlay-loss">
+      <div class="overlay-card">
+        <span class="overlay-title overlay-death-title">Você perdeu!</span>
+        <span class="overlay-subtitle">Vencedor: <span id="loss-winner"></span></span>
+        <button class="btn-primary" id="btn-loss-lobby">VOLTAR À ESPERA</button>
+      </div>
+    </div>
+
+    <!-- Vitória -->
+    <div class="game-overlay" id="overlay-victory">
+      <div class="overlay-card">
+        <span class="overlay-title overlay-victory-title">Você venceu!</span>
+        <button class="btn-primary" id="btn-victory-lobby">VOLTAR AO LOBBY</button>
+      </div>
+    </div>
+
+  </div>
+  <script type="module" src="/js/main.js"></script>
+</body>
+</html>

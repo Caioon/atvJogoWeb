@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ASCEND</title>
+
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body data-page="home">
+
+  <div class="screen active" id="screen-name">
+
+    <div class="game-title">
+      <h1>ASCEND</h1>
+      <p>corrida vertical multijogador</p>
+    </div>
+
+    <div class="card">
+
+      <span class="card-title">
+        Entrar no jogo
+      </span>
+
+      <label>
+        Seu nome
+
+        <input type="text" id="name-input" placeholder="ex: jogador1" maxlength="15" autocomplete="off" autofocus>
+
+        <span class="input-hint">
+          1–15 caracteres
+        </span>
+
+      </label>
+
+      <span class="error-msg" id="name-error">
+        O nome precisa ter pelo menos 1 caractere.
+      </span>
+
+      <button class="btn-primary" id="btn-enter">
+        ENTRAR →
+      </button>
+
+    </div>
+
+  </div>
+
+  <script type="module" src="/js/main.js">
+  </script>
+
+</body>
+
+</html>

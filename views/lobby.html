@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ASCEND | Lobby</title>
+
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body data-page="lobby">
+
+  <div class="screen active" id="screen-lobby">
+
+    <div class="game-title">
+      <h1>ASCEND</h1>
+      <p>corrida vertical multijogador</p>
+    </div>
+
+    <div class="card">
+
+      <span class="card-title">
+        Lobby
+      </span>
+
+      <div class="status-bar">
+
+        <span class="status-dot"></span>
+
+        <span id="lobby-count">
+          1 jogador conectado
+        </span>
+
+      </div>
+
+      <hr class="divider">
+
+      <div class="player-list" id="player-list">
+      </div>
+
+    </div>
+
+    <div class="card" id="admin-area">
+
+      <span class="card-title">
+        Administrador
+      </span>
+
+      <div class="countdown-area" id="countdown-area">
+
+        <span class="countdown-label">
+          partida começa em
+        </span>
+
+        <span class="countdown-number" id="countdown-number">
+          10
+        </span>
+
+      </div>
+
+      <button class="btn-start" id="btn-start">
+        INICIAR PARTIDA
+      </button>
+
+      <button class="btn-cancel" id="btn-cancel" style="display:none;">
+        CANCELAR
+      </button>
+
+    </div>
+
+    <div class="card" id="waiting-area" style="display:none;">
+
+      <span class="waiting-msg" id="waiting-text">
+        Esperando adm iniciar partida…
+      </span>
+
+      <div class="countdown-area" id="countdown-area-guest">
+
+        <span class="countdown-label">
+          partida começa em
+        </span>
+
+        <span class="countdown-number" id="countdown-number-guest">
+          10
+        </span>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <script type="module" src="/js/main.js">
+  </script>
+
+</body>
+
+</html>

@@ -1,0 +1,477 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg: #0f0f13;
+  --surface: #1a1a22;
+  --border: #2e2e3d;
+  --accent: #7c6af7;
+  --accent-dim: #4a3fcf;
+  --text: #e8e8f0;
+  --text-dim: #7a7a94;
+  --success: #4fc97a;
+  --radius: 6px;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Courier New', Courier, monospace;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* ───────────────────────────── */
+/* SCREENS */
+/* ───────────────────────────── */
+
+.screen {
+  width: 100%;
+  display: flex;
+}
+
+/* ───────────────────────────── */
+/* NAME SCREEN / LOBBY */
+/* ───────────────────────────── */
+
+#screen-name,
+#screen-lobby {
+  max-width: 480px;
+  padding: 24px;
+  flex-direction: column;
+  gap: 24px;
+  margin: 0 auto;
+  min-height: 100vh;
+  justify-content: center;
+}
+
+/* ───────────────────────────── */
+/* GAME SCREEN */
+/* ───────────────────────────── */
+
+#screen-game {
+  width: 100vw;
+  height: 100dvh;
+  position: relative;
+  flex-direction: column;
+}
+
+/* ───────────────────────────── */
+/* TITLE */
+/* ───────────────────────────── */
+
+.game-title {
+  text-align: center;
+}
+
+.game-title h1 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  letter-spacing: 0.25em;
+  color: var(--accent);
+}
+
+.game-title p {
+  font-size: 0.75rem;
+  color: var(--text-dim);
+  letter-spacing: 0.1em;
+  margin-top: 4px;
+}
+
+/* ───────────────────────────── */
+/* CARD */
+/* ───────────────────────────── */
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.card-title {
+  font-size: 0.7rem;
+  letter-spacing: 0.15em;
+  color: var(--text-dim);
+  text-transform: uppercase;
+}
+
+/* ───────────────────────────── */
+/* FORM */
+/* ───────────────────────────── */
+
+label {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 0.85rem;
+  color: var(--text-dim);
+}
+
+input[type="text"] {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  color: var(--text);
+  font-family: inherit;
+  font-size: 1rem;
+  padding: 10px 14px;
+  outline: none;
+  transition: border-color 0.15s;
+}
+
+input[type="text"]:focus {
+  border-color: var(--accent);
+}
+
+.input-hint {
+  font-size: 0.7rem;
+  color: var(--text-dim);
+}
+
+.error-msg {
+  font-size: 0.75rem;
+  color: #f07070;
+  display: none;
+}
+
+.error-msg.visible {
+  display: block;
+}
+
+/* ───────────────────────────── */
+/* BUTTONS */
+/* ───────────────────────────── */
+
+button {
+  font-family: inherit;
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+  border: none;
+  border-radius: var(--radius);
+  cursor: pointer;
+  padding: 11px 20px;
+  transition: background 0.15s, opacity 0.15s;
+}
+
+.btn-primary {
+  background: var(--accent);
+  color: #fff;
+  width: 100%;
+}
+
+.btn-primary:hover {
+  background: #9b8dff;
+}
+
+.btn-start {
+  background: var(--success);
+  color: #0f0f13;
+  font-weight: 700;
+  width: 100%;
+}
+
+.btn-start:hover {
+  background: #6de096;
+}
+
+.btn-cancel {
+  background: transparent;
+  color: var(--text-dim);
+  border: 1px solid var(--border);
+  width: 100%;
+}
+
+.btn-cancel:hover {
+  border-color: var(--text-dim);
+  color: var(--text);
+}
+
+/* ───────────────────────────── */
+/* PLAYER LIST */
+/* ───────────────────────────── */
+
+.player-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.player-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 12px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  font-size: 0.85rem;
+}
+
+.player-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--success);
+  flex-shrink: 0;
+}
+
+.player-name {
+  flex: 1;
+}
+
+.player-tag {
+  font-size: 0.65rem;
+  color: var(--accent);
+  letter-spacing: 0.08em;
+  border: 1px solid var(--accent-dim);
+  border-radius: 3px;
+  padding: 2px 6px;
+}
+
+/* ───────────────────────────── */
+/* STATUS BAR */
+/* ───────────────────────────── */
+
+.status-bar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.75rem;
+  color: var(--text-dim);
+}
+
+.status-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--success);
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.3; }
+}
+
+/* ───────────────────────────── */
+/* COUNTDOWN */
+/* ───────────────────────────── */
+
+.countdown-area {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 16px;
+  background: var(--bg);
+  border: 1px solid var(--accent-dim);
+  border-radius: var(--radius);
+}
+
+.countdown-area.visible {
+  display: flex;
+}
+
+.countdown-label {
+  font-size: 0.7rem;
+  color: var(--text-dim);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.countdown-number {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--accent);
+}
+
+.waiting-msg {
+  font-size: 0.8rem;
+  color: var(--text-dim);
+  text-align: center;
+  padding: 8px 0;
+}
+
+.divider {
+  border: none;
+  border-top: 1px solid var(--border);
+}
+
+/* ───────────────────────────── */
+/* GAME HUD */
+/* ───────────────────────────── */
+
+#game-hud {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  right: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  pointer-events: none;
+  z-index: 10;
+}
+
+#hud-name {
+  font-size: 0.75rem;
+  color: var(--text-dim);
+  letter-spacing: 0.1em;
+}
+
+#btn-back-lobby {
+  pointer-events: all;
+  background: transparent;
+  color: var(--text-dim);
+  border: 1px solid var(--border);
+  font-size: 0.72rem;
+  padding: 6px 14px;
+  letter-spacing: 0.08em;
+}
+
+#btn-back-lobby:hover {
+  border-color: var(--text);
+  color: var(--text);
+}
+
+/* ───────────────────────────── */
+/* CANVAS */
+/* ───────────────────────────── */
+
+#game-canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+/* ───────────────────────────── */
+/* CONTROLS HINT */
+/* ───────────────────────────── */
+
+#controls-hint {
+  position: absolute;
+  bottom: 14px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 0.65rem;
+  color: var(--text-dim);
+  letter-spacing: 0.08em;
+  white-space: nowrap;
+  pointer-events: none;
+}
+
+/* ───────────────────────────── */
+/* MOBILE CONTROLS               */
+/* ───────────────────────────── */
+
+#mobile-controls {
+  display: none;
+  position: absolute;
+  bottom: max(24px, env(safe-area-inset-bottom));
+  left: 0;
+  right: 0;
+  padding: 0 24px;
+  justify-content: space-between;
+  align-items: flex-end;
+  pointer-events: none;
+  z-index: 20;
+}
+
+#mobile-left-group {
+  display: flex;
+  gap: 12px;
+}
+
+#mobile-controls button {
+  pointer-events: all;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: rgba(124, 106, 247, 0.18);
+  border: 2px solid rgba(124, 106, 247, 0.45);
+  color: var(--text);
+  font-size: 1.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+  touch-action: none;
+}
+
+#mobile-controls button:active {
+  background: rgba(124, 106, 247, 0.4);
+  border-color: var(--accent);
+}
+
+#btn-mobile-jump {
+  width: 72px !important;
+  height: 72px !important;
+  font-size: 1.6rem !important;
+}
+
+
+/* ───────────────────────────── */
+/* GAME OVERLAYS                 */
+/* ───────────────────────────── */
+
+.game-overlay {
+  display: none;
+  position: absolute;
+  inset: 0;
+  background: rgba(15, 15, 19, 0.85);
+  z-index: 50;
+  align-items: center;
+  justify-content: center;
+}
+
+.overlay-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  padding: 40px 48px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+
+.overlay-title {
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+.overlay-death-title {
+  color: #f76a6a;
+}
+
+.overlay-subtitle {
+  font-size: 0.9rem;
+  color: var(--text-dim);
+  letter-spacing: 0.08em;
+}
+
+.overlay-subtitle span {
+  color: var(--text);
+}
+
+.overlay-victory-title {
+  color: var(--success);
+}
+
+.overlay-card .btn-primary {
+  width: auto;
+  padding: 11px 32px;
+}
